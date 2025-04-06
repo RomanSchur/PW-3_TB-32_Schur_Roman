@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Практична робота №2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #000000;
+            text-align: center;
+            padding: 20px;
+        }
+        .calculator {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h2, h3 {color: #000000;}
+        label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        input {
+            width: 150px;
+            padding: 8px;
+            border: 1px solid #494848;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: right;
+        }
+        button {
+            background:  #000000;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+<div class="calculator">
+    <h2>Калькулятор для розрахунку прибутку від сонячних електростанцій</h2>
+    <label>Середньодобова потужність (Pc, МВт): <input type="number" id="1" value="20.47"></label>
+    <label>Середньоквадратичне відхилення (q1, МВт): <input type="number" id="2" value="1"></label>
+    <label>Зменшена похибка (q2, МВт): <input type="number" id="3" value="0.25"></label>
+    <label>Вартість електроенергії (B, КВт*год): <input type="number" id="4" value="7"></label>
+    <button onclick="calculate()">Обрахувати</button>
+
+    <div class="result" id="res"></div>
+</div>
+
+<script src="Pr3.js"></script>
+</body>
+</html>
